@@ -7,8 +7,8 @@ export class nextDates extends React.Component {
         (
             <div className="mt-5 d-flex">
                 <h3>Les prochaines dates</h3>
+                <p>salut</p>
             </div>
-
         )
     }
 }
