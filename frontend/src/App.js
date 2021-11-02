@@ -2,9 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { nextDates } from './components/nextDates'
+
+
 function App() {
   return (
-    <div className="App">
+
+    <div className="container">
+      <nextDates />
+    </div>
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +26,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div>*/
   );
 }
 
