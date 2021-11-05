@@ -1,16 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
-import { nextDates } from './components/nextDates'
+// load components
+
+import { NextDates } from './components/NextDates'
+
+function Button() {
+  return <button>Click Me!</button>
+}
 
 
 function App() {
   return (
 
-    <div className="container">
-      <nextDates />
+    <div className="App">
+      <h1>Les prochaines dates</h1>
+      <NextDates />
+
+      <Button />
+
     </div>
+
     /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

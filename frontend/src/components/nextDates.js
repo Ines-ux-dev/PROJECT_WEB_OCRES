@@ -1,13 +1,14 @@
-import React from 'react';
-import '../index.css';
+import React, { Component } from 'react';
 
-export class nextDates extends React.Component {
+export class NextDates extends Component {
     render() {
-        return
-        (
-            <div>
-                <h3>Les prochaines dates</h3>
+        return (
+            <div className="container">
+                Les prochaines dates !
             </div>
-        )
+        );
     }
 }
+
+
+
