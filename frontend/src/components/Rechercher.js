@@ -5,7 +5,7 @@ export function Rechercher({ query, onChange }) {
 
     return (
 
-        <SearchInput placeholder="Rechercher..." width="100%" autofocus value={query}
+        <SearchInput placeholder="Rechercher..." width="100%" autoFocus value={query}
             onChange={onChange}
         />
     );

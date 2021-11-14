@@ -14,21 +14,28 @@ export function ResultatRecherche({ results }) {
         return <p>No results.</p>
     }
 
+
+
     //Sinon on a un resultat
     return (
-        <Row>
-            {results.map((result) => (
 
-                < Col xs={12} md={6} lg={3} key={result.id} >
-                    <p>{result.title}</p>
-                    <Card>
-                        <Card.Img variant="top" src={`https://www.artic.edu/iiif/2/${result.image_id}/full/843,/0/default.jpg`} alt={result.thumbnail.alt_text} />
-                        <Card.Body>
-                            <Card.Title>{result.title}</Card.Title>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            ))
+        < Row >
+            {
+                results.map((result) => (
+
+
+                    < Col xs={12} md={6} lg={3} key={result.id} >
+                        <p>{result.title}</p>
+
+                        <Card>
+
+                            <Card.Img variant="top" src={`https://www.artic.edu/iiif/2/${result.image_id}/full/843,/0/default.jpg`} /*alt={result.thumbnail.alt_text}*/ />
+                            <Card.Body>
+                                <Card.Title>{result.title}</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Col >
+                ))
             }
         </Row >
     );

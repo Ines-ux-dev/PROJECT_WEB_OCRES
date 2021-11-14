@@ -9,11 +9,11 @@ import { recherche } from './APIArtChicago';
 import { NextDates } from './components/NextDates';
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
+import { Event } from "./components/Event.js";
 
 function Button() {
   return <button>Click Me!</button>
 }
-
 
 function App() {
 
@@ -44,10 +44,10 @@ function App() {
     }).catch(err => console.log(err));
 
   }, [query]);
-
+  console.log(results)
   return (
 
-    <div className="App">
+    < div className="App" >
       <header className="App-header">
         <div className="Search">
           <Navbar bg="dark" variant="dark">
@@ -61,32 +61,16 @@ function App() {
         <Container fluid>
           <ResultatRecherche results={results} />
         </Container>
+
       </main>
 
       <h1>Les prochaines dates</h1>
       <NextDates />
       <Button />
-      <img src={`https://www.artic.edu/iiif/2/${10550}/full/843,/0/default.jpg`} alt="Grapefruit slice atop a pile of other slices" />
 
+      <Event />
 
-    </div>
-
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
+    </div >
   );
 }
 
