@@ -10,6 +10,10 @@ import { NextDates } from './components/NextDates';
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { Event } from "./components/Event.js";
+import { Circle } from "./components/Cercle.js";
+import { TestTitle } from './components/TestTitle';
+
+fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
 function Button() {
   return <button>Click Me!</button>
@@ -69,7 +73,10 @@ function App() {
       <Button />
 
       <Event />
+      <Circle />
 
+      <Circle />
+      <Circle />
     </div >
   );
 }

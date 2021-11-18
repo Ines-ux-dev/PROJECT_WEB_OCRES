@@ -1,0 +1,31 @@
+.testcercle{
+    display: flex;
+    background-color: blueviolet;
+    border-color: black;
+    border-style: solid;
+    border-width: 50;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+
+}
+.testtitle{
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+
+}
+.teststartdate{
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    
+}
+.testenddate{
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    
+}

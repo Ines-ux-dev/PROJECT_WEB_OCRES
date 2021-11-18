@@ -16,14 +16,7 @@ export class Event extends Component {
 
             <div className="line-event">
 
-                <table>
-                    <td>
-                        bonjour
-                    </td>
-                    <td>
-                        jbkjb
-                    </td>
-                </table>
+
             </div>
         )
     }
