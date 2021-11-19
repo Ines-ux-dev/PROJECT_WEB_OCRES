@@ -8,11 +8,11 @@ import React, { Component } from 'react';
         console.log(result)
     })*/
 
-export class TestTitle extends Component {
+export class TestImage extends Component {
     state = {
         post: {
             data: {
-                title: ''
+                image_id: ''
             }
         }
     }
@@ -37,13 +37,12 @@ export class TestTitle extends Component {
         return (
             <div className="TestTitle">
                 <h1>Ce qui doit être afficher : </h1>
-                {this.state.post.data.title}
+
+                <img src={`https://www.artic.edu/iiif/2/${this.state.post.data.image_id}/full/843,/0/default.jpg`}></img>
             </div>
 
         );
     }
 
 }
-
-
 

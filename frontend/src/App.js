@@ -12,7 +12,7 @@ import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { Event } from "./components/Event.js";
 import { Circle } from "./components/Cercle.js";
 import { TestTitle } from './components/TestTitle';
-
+import { TestImage } from './components/TestImage';
 fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
 function Button() {
@@ -73,8 +73,9 @@ function App() {
       <Button />
 
       <Event />
+      <TestTitle />
+      <TestImage />
       <Circle />
-
       <Circle />
       <Circle />
     </div >
