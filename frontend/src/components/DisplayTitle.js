@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 //si le thmbnail existe alors oui sinon ne retourne rien
 //pcq il n'y pas tous les resultats qui on un thumbnail
 //only access alt_text if thumbnail exists
@@ -9,7 +9,7 @@ export function DisplayTitle({ resultat }) {
         return null;
     }
 
-    //
+
     if (resultat.length === 0) {
         return <p>No results.</p>
     }
