@@ -13,6 +13,11 @@ import { Event } from "./components/Event.js";
 import { Circle } from "./components/Cercle.js";
 import { TestTitle } from './components/TestTitle';
 import { TestImage } from './components/TestImage';
+
+import ImageSlider from './components/ImageSlider';
+import { SliderData } from './components/SliderData';
+
+
 fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
 function Button() {
@@ -78,8 +83,23 @@ function App() {
       <Circle />
       <Circle />
       <Circle />
+      <ImageSlider slides={SliderData} />
     </div >
   );
 }
 
 export default App;
+
+
+
+
+/*import React from 'react';
+import './App.css';
+import ImageSlider from './components/ImageSlider';
+import { SliderData } from './components/SliderData';
+
+function App() {
+  return <ImageSlider slides={SliderData} />;
+}
+
+export default App;*/
