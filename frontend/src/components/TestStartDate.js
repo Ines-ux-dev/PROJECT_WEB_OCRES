@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 
-export class TestTitle extends Component {
+export class TestStartDate extends Component {
     state = {
         post: {
 
             data: [{
-                title: ''
+
+                start_date: ''
+
             }]
 
 
@@ -28,9 +30,10 @@ export class TestTitle extends Component {
     render() {
         console.log(this.state.post.data);
         return (
-            <div className="testtitle">
-                {this.state.post.data[0].title}
+            <div className="testdate">
 
+
+                {this.state.post.data[0].start_date}
 
 
 

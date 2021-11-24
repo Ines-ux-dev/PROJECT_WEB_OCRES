@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import '../circle.css'
-import { Row, Col, Container, Image } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
+
+import { TestEndDate } from './TestEndDate';
+import { TestStartDate } from './TestStartDate';
+import { TestTitle } from './TestTitle';
+
 
 
 export class Circle extends Component {
@@ -15,13 +20,16 @@ export class Circle extends Component {
                 </Col>
                 <Col xs={3} md={3} lg={3}>
                     <div className="testtitle">
-                        Title
+                        <TestTitle />
+
                     </div>
                     <div className="teststartdate">
-                        debut
+                        <TestStartDate />
+
                     </div>
                     <div className="testenddate">
-                        fin
+                        <TestEndDate />
+
                     </div>
                     <br></br>
                 </Col>

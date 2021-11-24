@@ -6,18 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // load components
 import { recherche } from './APIArtChicago';
-import { NextDates } from './components/NextDates';
+
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { Event } from "./components/Event.js";
 import { Circle } from "./components/Cercle.js";
-import { TestTitle } from './components/TestTitle';
 import { TestImage } from './components/TestImage';
-fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
-function Button() {
-  return <button>Click Me!</button>
-}
+//fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
+
 
 function App() {
 
@@ -63,17 +60,13 @@ function App() {
 
       <main>
         <Container fluid>
+          <p>Results:</p>
           <ResultatRecherche results={results} />
         </Container>
 
       </main>
 
-      <h1>Les prochaines dates</h1>
-      <NextDates />
-      <Button />
-
       <Event />
-      <TestTitle />
       <TestImage />
       <Circle />
       <Circle />
