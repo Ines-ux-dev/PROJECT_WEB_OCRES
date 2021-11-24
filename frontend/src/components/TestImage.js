@@ -11,8 +11,10 @@ import React, { Component } from 'react';
 export class TestImage extends Component {
     state = {
         post: {
+
             data: {
-                image_id: ''
+                image_id: '',
+                title: ''
             }
         }
     }
@@ -21,7 +23,7 @@ export class TestImage extends Component {
 
     //https://jsonplaceholder.typicode.com/todos/1
     componentDidMount() {
-        fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
+        fetch('https://api.artic.edu/api/v1/artworks/24645?fields=id,title,image_id')
             .then((response) => {
                 return response.json()
             })
@@ -33,12 +35,14 @@ export class TestImage extends Component {
     }
 
     render() {
-        console.log(this.state.post.data);
+        console.log(this.state.post.data.image_id);
         return (
-            <div className="TestTitle">
-                <h1>Ce qui doit être afficher : </h1>
+            <div className="testImage" >
+                <div className="testTitle">
 
-                <img src={`https://www.artic.edu/iiif/2/${this.state.post.data.image_id}/full/843,/0/default.jpg`}></img>
+                    {this.state.post.data.title}
+                </div>
+                <img src={`https://www.artic.edu/iiif/2/${this.state.post.data.image_id}/full/843,/0/default.jpg`} alt=" "></img>
             </div>
 
         );

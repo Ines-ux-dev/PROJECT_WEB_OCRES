@@ -15,8 +15,6 @@ export class Event extends Component {
         return (
 
             <div className="line-event">
-
-
             </div>
         )
     }
