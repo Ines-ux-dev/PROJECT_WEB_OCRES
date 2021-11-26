@@ -12,6 +12,7 @@ import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { Event } from "./components/Event.js";
 import { Circle } from "./components/Cercle.js";
 import { TestImage } from './components/TestImage';
+import { Navbars } from './components/Navbars';
 
 //fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
@@ -49,10 +50,13 @@ function App() {
   return (
 
     < div className="App" >
+
       <header className="App-header">
+
         <div className="Search">
-          <Navbar bg="dark" variant="dark">
-            <Navbar.Brand>Navbar test</Navbar.Brand>
+          <Navbars />
+          <Navbar>
+
           </Navbar>
         </div>
         <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
@@ -60,7 +64,7 @@ function App() {
 
       <main>
         <Container fluid>
-          <p>Results:</p>
+          <p className="result">Results:</p>
           <ResultatRecherche results={results} />
         </Container>
 

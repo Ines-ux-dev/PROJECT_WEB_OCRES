@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.horloge{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:cornsilk;
+    text-shadow: 0 2 50px rgba(10,10,10,0.5);
+}
+
+/*.heures{
+
+}
+.date{
+
+}*/
