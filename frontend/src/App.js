@@ -16,7 +16,7 @@ import { TestImage } from './components/TestImage';
 
 import ImageSlider from './components/ImageSlider';
 import { SliderData } from './components/SliderData';
-
+import { Slider } from './components/Slider';
 
 fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
@@ -54,7 +54,9 @@ function App() {
 
   }, [query]);
   console.log(results)
+
   return (
+
 
     < div className="App" >
       <header className="App-header">
@@ -83,23 +85,11 @@ function App() {
       <Circle />
       <Circle />
       <Circle />
-      <ImageSlider slides={SliderData} />
+
+      <Slider />
     </div >
   );
 }
 
 export default App;
-
-
-
-
-/*import React from 'react';
-import './App.css';
-import ImageSlider from './components/ImageSlider';
-import { SliderData } from './components/SliderData';
-
-function App() {
-  return <ImageSlider slides={SliderData} />;
-}
-
-export default App;*/
+/*<ImageSlider slides={SliderData} />*/

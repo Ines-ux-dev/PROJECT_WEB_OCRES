@@ -11,9 +11,9 @@ import React, { Component } from 'react';
 export class TestImage extends Component {
     state = {
         post: {
-            data: {
-                image_id: ''
-            }
+            data: []
+
+
         }
     }
     //https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id

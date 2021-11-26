@@ -1,0 +1,37 @@
+.carousel {
+    position: relative;
+    border-color: red;
+}
+.carousel .thumbs {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.carousel .thumb {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.carousel .overlay {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    left: 10%;
+    padding: 0.4rem 1.5rem;
+    text-align: left;
+    background: rgba(0,0,0,0.6);
+    color : white
+}
+.carousel .overlay_title {
+    margin: 0.8rem 0 1rem 0;
+}
+@media screen and (max-width:600px) {
+    .carousel .slide img {
+        width: 100vw !important;
+        height: 40vh;
+        object-fit: cover;
+    }
+    
+}
