@@ -29,18 +29,11 @@ export class Slider extends Component {
 
     render() {
         return (
-            <Carousel
-                autoPlay interval={6000}
-                infiniteLoop thumbWidth={120}
-                showIndicators={false}
-                showStatus={false}
-            >
+            <Carousel>
                 {this.state.post.data.map(slide => (
-                    <div >
+                    <div key={slide.image_id}>
                         <img src={`https://www.artic.edu/iiif/2/${slide.image_id}/full/843,/0/default.jpg`}></img>
-                        <div className="overlay">
-                            <h2 className="overlay_title">{slide.title}</h2>
-                        </div>
+
                     </div>
                 ))}
             </Carousel>
@@ -50,5 +43,12 @@ export class Slider extends Component {
 }
 
 /**key={slide.image_id} */
+/**<div className="overlay">
+                            <h2 className="overlay_title">{slide.title}</h2>
+                        </div> */
+/** autoPlay interval={6000}
+                infiniteLoop thumbWidth={120}
+        showIndicators={false}
+                showStatus={false} */
 
 

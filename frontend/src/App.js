@@ -17,6 +17,9 @@ import { TestImage } from './components/TestImage';
 import ImageSlider from './components/ImageSlider';
 import { SliderData } from './components/SliderData';
 import { Slider } from './components/Slider';
+import { TestCarou } from './components/TestCarou';
+
+import { Clock } from './components/Clock';
 
 fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
 
@@ -26,7 +29,14 @@ function Button() {
 
 function App() {
 
-  const [query, setQuery] = useState("");
+  var d = new Date();
+  var date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+  var fullDate = date + ' ' + hours;
+  console.log(fullDate);
+
+  return <Clock />
+  /*const [query, setQuery] = useState("");
   const [results, setResults] = useState(null);
 
   useEffect(() => {
@@ -88,7 +98,7 @@ function App() {
 
       <Slider />
     </div >
-  );
+  );*/
 }
 
 export default App;
