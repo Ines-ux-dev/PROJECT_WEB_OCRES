@@ -11,13 +11,15 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    color:cornsilk;
+    color:black;
     text-shadow: 0 2 50px rgba(10,10,10,0.5);
 }
 
-/*.heures{
-
+.heures{
+    width:500px;
+    font-size:100px;
 }
 .date{
-
-}*/
+    font-size:25px;
+    
+}

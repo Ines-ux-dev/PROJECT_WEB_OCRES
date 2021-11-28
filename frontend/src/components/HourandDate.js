@@ -45,16 +45,20 @@ export class HourandDate extends Component {
     }
 
 
+
     render() {
         return (
             <div class="horloge">
                 <div class="heures">
+                    <p>Heures:</p>
                     <div class="date">
-
+                        <p>Date:</p>
                     </div>
                 </div>
             </div>
         )
     }
+
 }
+
 
