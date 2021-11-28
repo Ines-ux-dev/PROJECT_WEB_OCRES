@@ -13,13 +13,18 @@
     align-items:center;
     color:black;
     text-shadow: 0 2 50px rgba(10,10,10,0.5);
+    border-width: 10px;
+    border-style: solid;
+    border-color: tomato;
 }
 
 .heures{
     width:500px;
     font-size:100px;
+    color: black;
 }
 .date{
     font-size:25px;
-    
+    color:black;
+
 }
