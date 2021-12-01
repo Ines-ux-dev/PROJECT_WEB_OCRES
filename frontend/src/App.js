@@ -43,42 +43,24 @@ function App() {
     }).catch(err => console.log(err));
 
   }, [query]);
-  console.log(results)
 
-  var d = new Date();
-
-  var date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-
-  var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-
-  var fullDate = date + ' ' + hours;
-
-  console.log(fullDate);
   return (
-
-
 
     < div className="App" >
       <header className="App-header">
 
         <div className="Search">
-          <Navbars />
-
+          <Navbars className="realHeader" />
           <Navbar>
           </Navbar>
-
           <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
           <Container fluid>
-            <ResultatRecherche results={results} />
+            <ResultatRecherche results={results} className="resultss" />
           </Container>
           <br></br>
         </div>
-
-
       </header>
-
       <main>
-
         <div>
           <CircleCHI />
         </div><br></br>

@@ -1,6 +1,6 @@
 .testcercle{
     display: flex;
-    background-color: blueviolet;
+    background-color: white;
     border-color: black;
     border-style: solid;
     border-width: 50;
@@ -9,6 +9,7 @@
     align-items: center;
     height: 100px;
     width: 100px;
+    color:black;
 
 }
 .testtitle{

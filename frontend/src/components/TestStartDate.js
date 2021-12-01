@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 var falseDate;
 var trueDate = new Date(falseDate);
 var dateMDY = `${trueDate.getDate()}-${trueDate.getMonth() + 1}-${trueDate.getFullYear()}`;
-var hour = `${trueDate.getHours()}`;
-var minutes = `${trueDate.getMinutes()}`;
-var hours;
-var Dateee;
+
 
 export class TestStartDate extends Component {
     state = {

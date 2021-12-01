@@ -4,11 +4,18 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: black;
+  color: white;
+
   
 }
 
 .App-logo {
   height: 40vmin;
+}
+
+.resultss{
+  text-emphasis-color: black;
 }
 
 .search{

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
+import '../navbars.css'
+
 //si le thmbnail existe alors oui sinon ne retourne rien
 //pcq il n'y pas tous les resultats qui on un thumbnail
 //only access alt_text if thumbnail exists
@@ -15,13 +17,8 @@ export function ResultatRecherche({ results }) {
             <Row>
                 <Col xs={6} md={6} lg={6}>
                     <p>Oups. Aucun résultats pour votre recherche.</p>
-
-
                 </Col>
-
             </Row>
-
-
         );
     }
 
@@ -37,7 +34,7 @@ export function ResultatRecherche({ results }) {
                     < Col xs={12} md={6} lg={3} key={result.id} >
                         <Card>
                             <Card.Body>
-                                <Card.Title>{result.title}</Card.Title>
+                                <Card.Title className="cardtitle">{result.title}</Card.Title>
                             </Card.Body>
                         </Card>
                     </Col >
