@@ -124,7 +124,6 @@ function App() {
           <Navbar>
           </Navbar>
 
-
           <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
           <Container fluid>
             <ResultatRecherche results={results} />
