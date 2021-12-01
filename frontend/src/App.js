@@ -3,20 +3,17 @@ import { useState, useEffect } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
 
 // load components
 import { recherche } from './APIArtChicago';
 
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
-import { Event } from "./components/Event.js";
 import { Circle } from "./components/Cercle.js";
-import { TestImage } from './components/TestImage';
 import { Navbars } from './components/Navbars';
-import { HourandDate } from './components/HourandDate';
-
 import { Caroutest } from './components/Caroutest';
+
+
 
 import './houranddate.css'
 
@@ -123,34 +120,32 @@ function App() {
 
         <div className="Search">
           <Navbars />
-          <Navbar>
 
+          <Navbar>
           </Navbar>
+
+
+          <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
+          <Container fluid>
+            <ResultatRecherche results={results} />
+          </Container>
+          <br></br>
         </div>
-        <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
+
       </header>
 
       <main>
-        <Container fluid>
-          <p className="result">Results:</p>
-          <ResultatRecherche results={results} />
-        </Container>
+
+        <div>
+          <Circle />
+          <Circle />
+          <Circle />
+
+        </div>
+        <p>TEST CAROUSSEL</p>
+        <Caroutest />
 
       </main>
-
-      <Event />
-      <TestImage />
-      <Circle />
-      <Circle />
-      <Circle />
-      <HourandDate className="heureee" />
-
-
-
-
-
-      <p>TEST CAROUSSEL</p>
-      <Caroutest />
 
 
 
@@ -159,17 +154,3 @@ function App() {
 }
 
 export default App;
-
-/*   <div className="testcarou">
-        <Carousel>
-          <Carousel.Item>
-            <img src="https://lh3.googleusercontent.com/ogw/ADea4I7MODyPj5JDi34tINSyblaAsRaU6iskYSs4A_E1=s32-c-mo" alt="This is the first slide" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src="https://www.artic.edu/iiif/2/b3974542-b9b4-7568-fc4b-966738f61d78/full/843,/0/default.jpg" alt="This is the first slide" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src="https://lh3.googleusercontent.com/ogw/ADea4I7MODyPj5JDi34tINSyblaAsRaU6iskYSs4A_E1=s32-c-mo" alt="This is the first slide" />
-          </Carousel.Item>
-        </Carousel>*/
-

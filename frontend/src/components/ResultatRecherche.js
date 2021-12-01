@@ -11,7 +11,18 @@ export function ResultatRecherche({ results }) {
 
     //
     if (results.length === 0) {
-        return <p>No results.</p>
+        return (
+            <Row>
+                <Col xs={6} md={6} lg={6}>
+                    <p>Oups. Aucun résultats pour votre recherche.</p>
+
+
+                </Col>
+
+            </Row>
+
+
+        );
     }
 
     //<Card.Img variant="top" src={`https://www.artic.edu/iiif/2/${result.image_id}/full/843,/0/default.jpg`} alt={" "} />
@@ -20,11 +31,9 @@ export function ResultatRecherche({ results }) {
     return (
 
         < Row >
+            <p className="result">Results:</p>
             {
-
                 results.map((result) => (
-
-
                     < Col xs={12} md={6} lg={3} key={result.id} >
                         <Card>
                             <Card.Body>

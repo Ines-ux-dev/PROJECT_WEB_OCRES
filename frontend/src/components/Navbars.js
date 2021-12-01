@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import '../navbars.css'
+import { HourandDate } from './HourandDate';
 
 
 export class Navbars extends Component {
@@ -10,8 +11,7 @@ export class Navbars extends Component {
                 <Col xs={2} md={2} lg={2}>
                     <div className="dateheurelieu">
                         Paris<br></br>
-                        5:29<br></br>
-                        26/11/2021<br></br>
+                        <HourandDate />
                     </div>
                 </Col>
                 <Col xs={9} md={9} lg={9}>
