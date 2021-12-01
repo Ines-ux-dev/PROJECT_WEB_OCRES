@@ -32,10 +32,7 @@ export class TestStartDate extends Component {
         return (
             <div className="testdate">
 
-
                 {this.state.post.data[0].start_date}
-
-
 
             </div>
 

@@ -4,49 +4,41 @@ import { Carousel } from 'react-bootstrap';
 
 export class Caroutest extends Component {
 
-    state = {
-        post: {
+  state = {
+    post: {
 
-            data: []
-        }
+      data: []
     }
+  }
 
-    componentDidMount() {
-        //retourner une promesse : récuperer les données depuis l'API
+  componentDidMount() {
+    //retourner une promesse : récuperer les données depuis l'API
 
-        fetch('https://api.artic.edu/api/v1/artworks?fields=id,title,image_id')
-            .then((response) => {
-                return response.json()
-            })
-            .then((result) => {
-                this.setState({ post: result })
-                console.log(result)
+    fetch('https://api.artic.edu/api/v1/artworks?fields=id,title,image_id')
+      .then((response) => {
+        return response.json()
+      })
+      .then((result) => {
+        this.setState({ post: result })
+        console.log(result)
 
-            })
-    }
+      })
+  }
 
-    render() {
-        return (
+  render() {
+    return (
 
-            <div className="testcarou">
-
-
-                <Carousel>
-
-                    <Carousel.Item>
-                        <p className="texxt">{this.state.post.data.title}</p>
-                        <img src={`https://www.artic.edu/iiif/2/${this.state.post.data.image_id}/full/843,/0/default.jpg`} alt="This is the first slide" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src="https://lh3.googleusercontent.com/ogw/ADea4I7MODyPj5JDi34tINSyblaAsRaU6iskYSs4A_E1=s32-c-mo" alt="This is the first slide" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src="https://api.artic.edu/api/v1/artworks/129884" alt="This is the first slide" />
-                    </Carousel.Item>
-                </Carousel>
-            </div>
-        )
-    }
+      <div className="testcarou">
+        <Carousel>
+          {this.state.post.data.map(slide => (
+            <Carousel.Item>
+              <img src={`https://www.artic.edu/iiif/2/${slide.image_id}/full/843,/0/default.jpg`} alt="This is the first slide" />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    )
+  }
 
 }
 
@@ -85,7 +77,20 @@ export class Caroutest extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-      </div>*/
+      </div>
+
+
+
+      <Carousel.Item>
+                        <p className="texxt">{this.state.post.data.title}</p>
+                        <img src={`https://www.artic.edu/iiif/2/${this.state.post.data.image_id}/full/843,/0/default.jpg`} alt="This is the first slide" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src="https://lh3.googleusercontent.com/ogw/ADea4I7MODyPj5JDi34tINSyblaAsRaU6iskYSs4A_E1=s32-c-mo" alt="This is the first slide" />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src="https://api.artic.edu/api/v1/artworks/129884" alt="This is the first slide" />
+                    </Carousel.Item>*/
 
 
 
