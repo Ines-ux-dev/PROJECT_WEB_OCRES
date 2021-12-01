@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 
+var falseDate;
+var trueDate = new Date(falseDate);
+var dateMDY = `${trueDate.getDate()}-${trueDate.getMonth() + 1}-${trueDate.getFullYear()}`;
+var hour = `${trueDate.getHours()}`;
+var minutes = `${trueDate.getMinutes()}`;
+var hours;
+var Dateee;
 
 export class TestEndDate extends Component {
     state = {
         post: {
-
             data: [{
-
                 end_date: ''
             }]
-
-
         }
     }
 
     componentDidMount() {
-        fetch('https://api.artic.edu/api/v1/events?limit=2')
+        fetch('https://api.artic.edu/api/v1/events?limit=1')
             .then((response) => {
                 return response.json()
             })
@@ -27,17 +30,36 @@ export class TestEndDate extends Component {
     }
 
     render() {
-        console.log(this.state.post.data);
-        return (
-            <div className="enddate">
+        if (this.state.post.data) {
+            falseDate = this.state.post.data[0].end_date;
+            trueDate = new Date(falseDate);
 
+            if (trueDate.getDate() < 10 && trueDate.getMonth() < 9) {
+                dateMDY = "0" + trueDate.getDate() + "/" + "0" + (trueDate.getMonth() + 1) + "/" + trueDate.getFullYear();
+                //dateMDY = `${trueDate.getDate()}-${trueDate.getMonth() + 1}-${trueDate.getFullYear()}`;
+                return dateMDY;
+            }
 
-                {this.state.post.data[0].end_date}
+            if (trueDate.getDate() < 10 && trueDate.getMonth() > 9) {
+                dateMDY = "0" + trueDate.getDate() + "/" + (trueDate.getMonth() + 1) + "/" + trueDate.getFullYear();
+                //dateMDY = `${trueDate.getDate()}-${trueDate.getMonth() + 1}-${trueDate.getFullYear()}`;
+                return dateMDY;
+            }
 
+            if (trueDate.getDate() > 10 && trueDate.getMonth() < 9) {
+                dateMDY = trueDate.getDate() + "/" + "0" + (trueDate.getMonth() + 1) + "/" + trueDate.getFullYear();
+                //dateMDY = `${trueDate.getDate()}-${trueDate.getMonth() + 1}-${trueDate.getFullYear()}`;
+                return dateMDY;
+            }
+            else {
+                dateMDY = `${trueDate.getDate()}/${trueDate.getMonth() + 1}/${trueDate.getFullYear()}`;
+                return dateMDY;
+            }
+        }
 
-            </div>
-
-        );
     }
 
 }
+
+
+

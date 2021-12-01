@@ -1,0 +1,58 @@
+/*.line-event{
+    border: solid 2px black;
+    margin-right: 60%;
+
+
+}*/
+
+
+.texxt{
+    color:white;
+}
+
+
+
+.testcarou{
+
+    display: flex;
+ 
+    
+ 
+ }
+ 
+ #carou{
+ 
+     display: flex;
+ 
+     align-items: center;
+ 
+     justify-content: center;
+ 
+     width: 500px;
+ 
+     height:550px;
+ 
+     background-color: rgb(247, 205, 189);
+ 
+     border-radius: 10px;
+ 
+ }
+ 
+ 
+ 
+ #car{
+ 
+     color: rgb(0, 0, 0);
+ 
+ }
+ 
+ img{
+ 
+     border-radius: 10px;
+ 
+ }
+
+
+
+
+

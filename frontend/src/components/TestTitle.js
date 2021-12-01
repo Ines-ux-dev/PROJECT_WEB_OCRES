@@ -14,7 +14,7 @@ export class TestTitle extends Component {
     }
 
     componentDidMount() {
-        fetch('https://api.artic.edu/api/v1/events?limit=3')
+        fetch('https://api.artic.edu/api/v1/events?limit=1')
             .then((response) => {
                 return response.json()
             })
@@ -30,12 +30,9 @@ export class TestTitle extends Component {
         return (
             <div className="testtitle">
                 {this.state.post.data[0].title}
-
             </div>
-
         );
     }
-
 }
 
 

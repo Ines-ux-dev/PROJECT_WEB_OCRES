@@ -5,31 +5,32 @@ import { Row, Col } from 'react-bootstrap';
 import { TestEndDate } from './TestEndDate';
 import { TestStartDate } from './TestStartDate';
 import { TestTitle } from './TestTitle';
+import { StartHour } from './StartHour';
+import { EndHour } from './EndHour';
 
+//event from Art Chicago API
 
-
-export class Circle extends Component {
+export class CircleCHI extends Component {
     render() {
 
         return (
             <Row>
                 <Col xs={1} md={1} lg={1}>
                     <div className="testcercle">
-                        14/11/2021
+                        <TestStartDate />
                     </div>
                 </Col>
                 <Col xs={3} md={3} lg={3}>
                     <div className="testtitle">
                         <TestTitle />
-
                     </div>
                     <div className="teststartdate">
-                        <TestStartDate />
-
+                        <TestStartDate /><br></br>
+                        <StartHour />
                     </div>
                     <div className="testenddate">
-                        <TestEndDate />
-
+                        <TestEndDate /><br></br>
+                        <EndHour />
                     </div>
                     <br></br>
                 </Col>
@@ -37,7 +38,7 @@ export class Circle extends Component {
         );
     }
 
-    
+
 }
 
 

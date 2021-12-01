@@ -9,66 +9,10 @@ import { recherche } from './APIArtChicago';
 
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
-import { Circle } from "./components/Cercle.js";
+import { CircleCHI } from "./components/CercleCHI.js";
 import { Navbars } from './components/Navbars';
 import { Caroutest } from './components/Caroutest';
-
-
-
 import './houranddate.css'
-
-/*var heureDiv = document.getElementById("h");
-var dateDiv = document.getElementById("d");
-var affichageHeure;
-
-affichageHeure = function () {
-  var today, annee, listeMois,
-    mois, listeJours, jourNumero, jourNom,
-    heures, minutes, secondes, deuxChiffres;
-
-  today = new Date();
-  annee = today.getFullYear();
-  listeMois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"];
-  mois = listeMois[today.getMonth()];
-  jourNumero = today.getDate();
-  //semaine commence par dimanche
-  listeJours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-  jourNom = listeJours[today.getDay()];
-  deuxChiffres = function (element) {
-    if (element < 10) {
-      return element = "0" + element;
-
-    }
-    else {
-      return element;
-    }
-  }
-
-  heures = deuxChiffres(today.getHours());
-  minutes = deuxChiffres(today.getMinutes());
-  secondes = deuxChiffres(today.getSeconds());
-
-  heureDiv.innerHTML += heures + ":" + minutes + ":" + secondes;
-  dateDiv.innerHTML += jourNom + ", " + jourNumero + " " + mois + " " + annee;
-
-  //toutes les secondes
-  setTimeout(affichageHeure, 1000);
-
-}
-
-affichageHeure();
-
-
-<div class="horloge">
-        <div class="heures" id="h">
-          blabla<p>Heures:</p>
-
-        </div>
-        <div class="date" id="d">
-          balbla<p>Date:</p>
-        </div>
-      </div>*/
-
 
 function App() {
 
@@ -112,10 +56,9 @@ function App() {
   console.log(fullDate);
   return (
 
+
+
     < div className="App" >
-
-
-
       <header className="App-header">
 
         <div className="Search">
@@ -131,23 +74,16 @@ function App() {
           <br></br>
         </div>
 
+
       </header>
 
       <main>
 
         <div>
-          <Circle />
-          <Circle />
-          <Circle />
-
-        </div>
-        <p>TEST CAROUSSEL</p>
+          <CircleCHI />
+        </div><br></br>
         <Caroutest />
-
       </main>
-
-
-
     </div >
   );
 }
