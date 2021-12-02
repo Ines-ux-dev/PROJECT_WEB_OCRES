@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,11 +10,13 @@ import { recherche } from './APIArtChicago';
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { CircleCHI } from "./components/CercleCHI.js";
-import { Navbars } from './components/Navbars';
 import { Caroutest } from './components/Caroutest';
 import { Graphe } from './components/Graphe';
+import { Citation } from './components/Citation';
+import { AccountIcone } from './components/AccountIcone';
 
 import './houranddate.css'
+import { ClockandDate } from './components/ClockandDate';
 
 
 
@@ -51,12 +53,25 @@ function App() {
   return (
 
     < div className="App" >
-      <header className="App-header">
+      <header /*className="App-header"*/>
 
-        <div className="Search">
-          <Navbars className="realHeader" />
-          <Navbar>
-          </Navbar>
+        <div /*className="Search"*/>
+          <Row >
+            <Col xs={5} md={5} lg={5}>
+              <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
+            </Col>
+            <Col xs={2} md={2} lg={2}>
+              <Citation />
+            </Col>
+            <Col xs={2} md={2} lg={2}>
+              <ClockandDate />
+            </Col>
+            <Col className="columIcon" xs={1} md={1} lg={1}>
+              <AccountIcone />
+
+            </Col>
+          </Row>
+
           <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
           <Container fluid>
             <ResultatRecherche results={results} className="resultss" />
@@ -69,7 +84,11 @@ function App() {
           <CircleCHI />
         </div><br></br>
         <Caroutest /><br></br>
-        <Graphe />
+        <div>
+          <p className="grapheTitle">Horaires d'affluence a l'Art Institute of Chicago</p><br></br>
+          <Graphe />
+        </div >
+
 
 
       </main>

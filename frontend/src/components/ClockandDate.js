@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class HourandDate extends Component {
+export class ClockandDate extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,7 +38,7 @@ export class HourandDate extends Component {
 
         return (
             <p className="App-clock">
-
+                Paris<br></br>
                 {this.state.hour}:
                 {this.state.minutes}:
                 {this.state.secondes}<br></br>
@@ -49,5 +49,4 @@ export class HourandDate extends Component {
     }
 }
 
-//{this.state.time}
 
