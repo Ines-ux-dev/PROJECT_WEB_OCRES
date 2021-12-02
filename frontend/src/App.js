@@ -12,7 +12,11 @@ import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { CircleCHI } from "./components/CercleCHI.js";
 import { Navbars } from './components/Navbars';
 import { Caroutest } from './components/Caroutest';
+import { Graphe } from './components/Graphe';
+
 import './houranddate.css'
+
+
 
 function App() {
 
@@ -64,8 +68,12 @@ function App() {
         <div>
           <CircleCHI />
         </div><br></br>
-        <Caroutest />
+        <Caroutest /><br></br>
+        <Graphe />
+
+
       </main>
+
     </div >
   );
 }
