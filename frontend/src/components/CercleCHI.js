@@ -8,12 +8,13 @@ import { TestTitle } from './TestTitle';
 import { StartHour } from './StartHour';
 import { EndHour } from './EndHour';
 
-//event from Art Chicago API
+//events from Art Chicago API && Our own API
 
 export class CircleCHI extends Component {
     render() {
 
         return (
+
             <Row>
                 <Col xs={1} md={1} lg={1}>
                     <div className="testcercle">
@@ -25,16 +26,16 @@ export class CircleCHI extends Component {
                         <TestTitle />
                     </div>
                     <div className="teststartdate">
-                        <TestStartDate /><br></br>
-                        <StartHour />
+                        De <StartHour /> à <EndHour />
                     </div>
                     <div className="testenddate">
-                        <TestEndDate /><br></br>
-                        <EndHour />
+                        Du <TestStartDate /> au <TestEndDate />
+
                     </div>
                     <br></br>
                 </Col>
             </Row>
+
         );
     }
 

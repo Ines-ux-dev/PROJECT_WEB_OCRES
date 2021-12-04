@@ -18,6 +18,7 @@ import { AccountIcone } from './components/AccountIcone';
 import './houranddate.css'
 import { ClockandDate } from './components/ClockandDate';
 
+import { CercleAPI } from './components/CercleAPI';
 
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
 
   }, [query]);
 
+
+
   return (
 
     < div className="App" >
@@ -72,7 +75,6 @@ function App() {
             </Col>
           </Row>
 
-          <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
           <Container fluid>
             <ResultatRecherche results={results} className="resultss" />
           </Container>
@@ -83,6 +85,10 @@ function App() {
         <div>
           <CircleCHI />
         </div><br></br>
+        <div>
+          <CercleAPI />
+        </div>
+
         <Caroutest /><br></br>
         <div>
           <p className="grapheTitle">Horaires d'affluence a l'Art Institute of Chicago</p><br></br>
