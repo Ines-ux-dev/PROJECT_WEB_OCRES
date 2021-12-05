@@ -1,19 +1,22 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+require('./models/dbConfig');
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+const eventsRoutes = require('./routes/eventsContrtoller');
+const citationsRoutes = require('./routes/citationsControllers')
 
-var app = express();
+const mongoose = require('mongoose');
+const cors = require('cors');
 
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+//mongoose.set('useFindAndModify', false);
 
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/events', eventsRoutes);
+app.use('/citations', citationsRoutes);
+
+
+app.listen(5500, () => console.log('server started: 5500'));
 module.exports = app;

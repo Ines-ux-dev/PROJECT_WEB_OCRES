@@ -1,105 +1,35 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// load components
-import { recherche } from './APIArtChicago';
-import { NextDates } from './components/NextDates';
-import { Rechercher } from "./components/Rechercher";
-import { ResultatRecherche } from "./components/ResultatRecherche.js";
-import { Event } from "./components/Event.js";
-import { Circle } from "./components/Cercle.js";
-import { TestTitle } from './components/TestTitle';
-import { TestImage } from './components/TestImage';
+import Dashboard from './Dashboard';
+import Api from './Api';
+import Navigation from './Navigation';
 
-import ImageSlider from './components/ImageSlider';
-import { SliderData } from './components/SliderData';
-import { Slider } from './components/Slider';
-import { TestCarou } from './components/TestCarou';
-
-import { Clock } from './components/Clock';
-
-fetch('https://api.artic.edu/api/v1/artworks/27992?fields=id,title,image_id')
-
-function Button() {
-  return <button>Click Me!</button>
-}
 
 function App() {
 
-  var d = new Date();
-  var date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-  var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-  var fullDate = date + ' ' + hours;
-  console.log(fullDate);
-
-  return <Clock />
-  /*const [query, setQuery] = useState("");
-  const [results, setResults] = useState(null);
-
-  useEffect(() => {
-
-    // Deux cas où on ne renvoie rien
-
-    // First : si le input est nul
-    if (!(query || query.length)) {
-      setResults(null);
-      return;
-    }
-
-    //Second : si moins de 3 caractères sont tapés dans la barre de recherche
-
-    if (query.length < 3) {
-      return;
-    }
-
-    recherche(query).then(results => {
-      if (results && results.data) {
-        setResults(results.data)
-      }
-
-    }).catch(err => console.log(err));
-
-  }, [query]);
-  console.log(results)
 
   return (
-
-
-    < div className="App" >
-      <header className="App-header">
-        <div className="Search">
-          <Navbar bg="dark" variant="dark">
-            <Navbar.Brand>Navbar test</Navbar.Brand>
-          </Navbar>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Dashboard />
+            </Route>
+            <Route path="/api">
+              <Api />
+            </Route>
+          </Switch>
         </div>
-        <Rechercher query={query} onChange={(e) => setQuery(e.target.value)} />
-      </header>
+      </div>
+    </Router>
 
-      <main>
-        <Container fluid>
-          <ResultatRecherche results={results} />
-        </Container>
+  )
 
-      </main>
-
-      <h1>Les prochaines dates</h1>
-      <NextDates />
-      <Button />
-
-      <Event />
-      <TestTitle />
-      <TestImage />
-      <Circle />
-      <Circle />
-      <Circle />
-
-      <Slider />
-    </div >
-  );*/
 }
-
 export default App;
-/*<ImageSlider slides={SliderData} />*/
