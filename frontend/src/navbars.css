@@ -42,4 +42,11 @@
     color:black;
 }
 
+/*Search input indication:*/
+.indicationRecherche{
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(160, 160, 160);
+}
+
 

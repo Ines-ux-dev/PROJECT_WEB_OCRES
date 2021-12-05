@@ -17,26 +17,26 @@ export class AccountIcone extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="accounts">
                 {this.state.users.map(users =>
-
                     <div>
-                        <div class="buttonAccount">
-                            <button className="accountData" onClick={() => { this.setState({ BackgroundColor: "PURPLE" }) }}>
-                                <MdAccountCircle size="40px" />
-                            </button>
-                        </div>
-
-
+                        <button className="buttonAccount" onClick={() => { this.setState({ BackgroundColor: "PURPLE" }) }}>
+                            <MdAccountCircle color="white" size="40px" />
+                        </button>
 
                         <div className="dataAccount" >
                             <div className="compte">Compte Google</div>
-                            <div>{users.firstname} {users.lastname}</div>
-                            <div>{users.email}</div>
+                            <div className="infoUser">
+                                {users.firstname} {users.lastname}<br></br>
+                                {users.email}
+                            </div>
                         </div>
+
+
                     </div>
 
-                )}
+                )
+                }
             </div>
 
         )

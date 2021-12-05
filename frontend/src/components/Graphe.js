@@ -120,8 +120,8 @@ export class Graphe extends Component {
 
             <BarChart
 
-                width={800}
-                height={800}
+                width={400}
+                height={400}
                 data={data}
                 margin={{
                     top: 5,

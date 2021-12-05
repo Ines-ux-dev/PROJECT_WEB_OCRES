@@ -1,17 +1,22 @@
-.dataAccount{
-    background-color: blue;
-    
+
+
+.buttonAccount:hover + .dataAccount{
+    display:block;
+  
 }
+
 .buttonAccount{
-    float: right;
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+   border-radius: 50%;
+
+   float: right;
     overflow: hidden;
-    /*border-radius: 50%;*/
-    /*justify-content: center;*/
+    justify-content: center;
 }
 
 
 .dataAccount{
-    border-color: black;
     border-style: solid;
     border-width: 50;
     position: absolute;
@@ -22,14 +27,7 @@
     display:none;
     color: white;
     background-color: black;
-    
+    padding: 10px;
 }
 
-.buttonAccount:hover + .dataAccount{
-    display:block;
-  
-}
 
-.accountData{
-    background-color: brown;
-}

@@ -1,17 +1,15 @@
 import React from 'react';
 import { SearchInput } from 'evergreen-ui';
+import '../navbars.css'
 
 export function Rechercher({ query, onChange }) {
 
     return (
-        /*<Row>
-            <Col xs={2} md={2} lg={2}>
-*/
-        <SearchInput placeholder="Rechercher (ex: Sunset)" width="37%" autoFocus value={query}
-            onChange={onChange}
-        />
-        /* </Col>
-
-     </Row>*/
+        <div>
+            <SearchInput placeholder="Rechercher un événement, une oeuvre...(ex: Sunset)" width="100%" autoFocus value={query}
+                onChange={onChange}
+            />
+            <p className="indicationRecherche"><em>Entrez au moins trois caractères lors de votre recherche.</em></p>
+        </div>
     );
 }

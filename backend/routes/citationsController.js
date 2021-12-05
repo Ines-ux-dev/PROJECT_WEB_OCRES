@@ -1,23 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const ObjectID = require('mongoose').Types.ObjectId;
-
-const Users = require('../Models/usersModel');
-
+const Citation = require('../models/citationsModel');
 //obtenir et afficher les évènements
-
 router.get('/', (req, res, next) => {
 
-    Users.find()
+    Citation.find()
         .then(things => res.status(200).json(things))
         .catch(error => res.status(400).json({ error }));
-
 })
 
 //obtenir et afficher un évènement
-
 router.get('/:id', (req, res, next) => {
-    UsersModel.findOne({ _id: req.params.id })
+    CitationsModel.findOne({ _id: req.params.id })
         .then(things => res.status(200).json(things))
         .catch(error => res.status(400).json({ error }));
 })
@@ -27,11 +22,11 @@ router.get('/:id', (req, res, next) => {
 router.post('/', (req, res, next) => {
 
     //delete req.body._id;
-    const user = new UsersModel({
+    const citation = new CitationsModel({
         ...req.body
     });
 
-    user.save()
+    citation.save()
 
         .then(() => res.status(201).json({ message: 'Evènement enregistré !' }))
 
@@ -45,7 +40,7 @@ router.post('/', (req, res, next) => {
 
 router.put("/:id", (req, res, next) => {
 
-    UsersModel.updateOne({ _id: req.params.id }, {
+    CitationsModel.updateOne({ _id: req.params.id }, {
 
         ...req.body, _id: req.params.useUnifiedTopology
 
@@ -61,7 +56,7 @@ router.put("/:id", (req, res, next) => {
 
 router.delete("/:id", (req, res, next) => {
 
-    UsersModel.deleteOne({ _id: req.params.id })
+    CitationsModel.deleteOne({ _id: req.params.id })
 
         .then(() => res.status(200).json({ message: 'Evènement supprimé !' }))
 
