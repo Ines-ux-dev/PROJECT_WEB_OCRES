@@ -1,0 +1,35 @@
+.dataAccount{
+    background-color: blue;
+    
+}
+.buttonAccount{
+    float: right;
+    overflow: hidden;
+    /*border-radius: 50%;*/
+    /*justify-content: center;*/
+}
+
+
+.dataAccount{
+    border-color: black;
+    border-style: solid;
+    border-width: 50;
+    position: absolute;
+    margin-top: 50px;
+    width: 200px;
+    float:bottom;
+    font-style: normal;
+    display:none;
+    color: white;
+    background-color: black;
+    
+}
+
+.buttonAccount:hover + .dataAccount{
+    display:block;
+  
+}
+
+.accountData{
+    background-color: brown;
+}

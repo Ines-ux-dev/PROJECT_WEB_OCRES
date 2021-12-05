@@ -1,11 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+mongoose.Promise = global.Promise;
 
-const EventsModel = mongoose.model(
-
-    "Dashboardbdd",
+const EventsModel = new Schema(
 
     {
-
         date_debut: {
 
             type: String,
@@ -56,8 +55,6 @@ const EventsModel = mongoose.model(
 
     },
 
-    "events"
-
 );
 
-module.exports = { EventsModel };
+module.exports = mongoose.models.Event || mongoose.model('Event', EventsModel);

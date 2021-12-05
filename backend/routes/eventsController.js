@@ -4,13 +4,13 @@ const router = express.Router();
 
 const ObjectID = require('mongoose').Types.ObjectId;
 
-const { EventsModel } = require('../models/eventsModel');
+const Event = require('../models/eventsModel');
 
 //obtenir et afficher les évènements
 
 router.get('/', (req, res, next) => {
 
-  EventsModel.find()
+  Event.find()
     .then(things => res.status(200).json(things))
     .catch(error => res.status(400).json({ error }));
 

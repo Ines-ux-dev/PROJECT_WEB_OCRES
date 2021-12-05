@@ -1,24 +1,44 @@
 import React, { Component } from 'react';
-
+import '../accounticon.css'
+import axios from 'axios';
+import { MdAccountCircle } from "react-icons/md";
 
 export class AccountIcone extends Component {
+
+    state = {
+        users: []
+    }
+    componentDidMount() {
+        axios.get('http://localhost:5500/users')
+            .then(res => {
+                const users = res.data;
+                this.setState({ users });
+            })
+    }
     render() {
         return (
             <div>
-                <div class="buttonAccount">
-                    <button className="accountData">
-                        <img class="initial" src="https://lh3.googleusercontent.com/ogw/ADea4I7MODyPj5JDi34tINSyblaAsRaU6iskYSs4A_E1=s32-c-mo" alt=" ">
-                        </img>
-                    </button>
+                {this.state.users.map(users =>
 
-                </div>
-                <span className="dataAccount">
-                    <div className="compte">Compte DANSE</div>
-                    <div>Nathalie OUCOR</div>
-                    <p>nathalie.oucor@danse.fr</p>
+                    <div>
+                        <div class="buttonAccount">
+                            <button className="accountData" onClick={() => { this.setState({ BackgroundColor: "PURPLE" }) }}>
+                                <MdAccountCircle size="40px" />
+                            </button>
+                        </div>
 
-                </span>
+
+
+                        <div className="dataAccount" >
+                            <div className="compte">Compte Google</div>
+                            <div>{users.firstname} {users.lastname}</div>
+                            <div>{users.email}</div>
+                        </div>
+                    </div>
+
+                )}
             </div>
+
         )
     }
 }

@@ -6,8 +6,6 @@ import { SatelliteIcon } from 'evergreen-ui';
 import { BsFillCalendarWeekFill } from "react-icons/bs";
 import { MdChair } from "react-icons/md";
 
-
-
 export class CercleAPI extends Component {
     state = {
         events: []
