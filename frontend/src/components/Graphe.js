@@ -109,9 +109,6 @@ const CustomTooltip = ({ active, payload, label }) => {
 
     return null;
 };
-
-
-
 export class Graphe extends Component {
 
     render() {
