@@ -1,4 +1,4 @@
-# Projet de fin de semestre Charlène CORENCIN & Ines OUACIF 
+# Projet de fin de semestre Charlène CORENCIN & Ines OUACIF GROUPE 08 OCRES
 
 <h2>Lien du tableau de bord TRELLO</h2>
 https://trello.com/b/MPwVHYcE/conduite-de-projet 
