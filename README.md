@@ -1,5 +1,11 @@
 # Projet de fin de semestre Charlène CORENCIN & Ines OUACIF 
 
+<h2>Lien du tableau de bord TRELLO</h2>
+https://trello.com/b/MPwVHYcE/conduite-de-projet 
+
+<h2>Lien du MOCK UP (maquette)</h2>
+https://www.figma.com/file/lt85wXe0LKZ68bUokFGWiu/Mockup?node-id=0%3A1 
+
 A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
 
 <p align="center">
