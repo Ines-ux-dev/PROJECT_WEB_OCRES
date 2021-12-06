@@ -1,21 +1,4 @@
-
-
-.recharts-tooltip-wrapper{
-    background-color: blueviolet;
-}
-
-.recharts-tooltip-cursor{
-    background-color: blueviolet;
-}
-
-.recharts-rectangle {
-    background-color: rgb(156, 106, 202);
-}
-
-recharts-layer.recharts-bar-rectangles {
-    background-color: blueviolet;
-}
 .custom-tooltip{
-    background-color: blueviolet;
+    background-color: rgb(119, 97, 139);
     color: white;
 }

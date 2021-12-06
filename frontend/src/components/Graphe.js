@@ -116,28 +116,30 @@ export class Graphe extends Component {
 
     render() {
         return (
+            <div>
+                <h6 className="grapheTitle">HORAIRES D'AFFLUENCE A L'INSTITUT D'ART DE CHICAGO</h6>
+                <BarChart
 
 
-            <BarChart
+                    width={600}
+                    height={400}
+                    data={data}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5
+                    }}
+                >
 
-                width={400}
-                height={400}
-                data={data}
-                margin={{
-                    top: 5,
-                    right: 30,
-                    left: 20,
-                    bottom: 5
-                }}
-            >
-
-                <Tooltip className="indications" content={<CustomTooltip />} />
-                <XAxis dataKey="name" />
+                    <Tooltip className="indications" content={<CustomTooltip />} />
+                    <XAxis dataKey="name" />
 
 
-                <Bar dataKey="uv" barSize={30} radius={20} fill="#83b0da" bottom={20} />
+                    <Bar dataKey="uv" barSize={30} radius={20} fill="#83b0da" bottom={20} />
 
-            </BarChart>
+                </BarChart>
+            </div>
         );
     }
 }

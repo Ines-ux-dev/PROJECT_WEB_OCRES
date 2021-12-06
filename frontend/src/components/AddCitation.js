@@ -44,7 +44,7 @@ function AddCitation() {
 
                 <input onChange={(e) => handle(e)} id="citation" value={data.citation} placeholder="Citation" type="text"></input>
 
-                <input onChange={(e) => handle(e)} id="année" value={data.année} placeholder="Anée" type="number"></input>
+                <input onChange={(e) => handle(e)} id="année" value={data.année} placeholder="Année" type="number"></input>
 
                 <button>Ajouter la citation</button>
 

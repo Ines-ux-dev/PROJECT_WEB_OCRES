@@ -7,13 +7,14 @@ import { TestTitle } from './TestTitle';
 import { StartHour } from './StartHour';
 import { EndHour } from './EndHour';
 
+
 //events from Art Chicago API && Our own API
 
 export class CircleCHI extends Component {
     render() {
         return (
             <Row className="eventsCHI">
-                <h6>Exposition ouverte à tous</h6>
+                <h6>EXPOSITION OUVERTE A TOUS</h6>
                 <Col xs={1} md={1} lg={1}>
                     <div className="testcercle">
                         <TestStartDate />

@@ -1,0 +1,6 @@
+.carouCitations{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}

@@ -1,38 +1,67 @@
 .testcercle{
     display: flex;
     background-color: white;
-    border-color: black;
-    border-style: solid;
-    border-width: 50;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     color:black;
+    font-size: 14px;
+    font-weight: bold;
 
 }
 .testtitle{
-    margin-left: 10px;
+    margin-left: 40px;
+   width:450px;
+   justify-content: center;
+   font-weight: bold;
 }
 .teststartdate{
-    margin-left: 20px;  
+    margin-left: 80px;
+    width:450px;  
+    font-size: 12px;
 }
 .testenddate{
-    margin-left: 20px;
+    margin-left: 80px;
+    width:450px;  
+    font-size: 12px;
 }
 
 .eventsCHI{
-    background-color: rgb(43, 22, 63);
+    background-color: rgb(0, 0, 0);
     padding: 5px;
 
 }
 .eventsAPII{
-    background-color: rgb(43, 22, 63);
+    background-color: rgb(0, 0, 0);
     padding: 5px;
 }
+.titleAPI{
+    margin-left: 80px;
+   width:450px;
+  
+   justify-content: center;
+   font-weight: bold;
+   
+}
+.startdateAPI{
+    margin-left: 80px;
+    width:450px;  
+    font-size: 12px;
+    
+}
+.enddateAPI{
+    margin-left: 80px;
+    width:450px; 
+    font-size: 12px;
+    
+}
+
 
 .nbPlaces{
-    margin-left: 20px;
+    margin-left: 80px;
+    font-size: 12px;
+    
 }
 

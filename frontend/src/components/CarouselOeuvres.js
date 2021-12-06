@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../caroutest.css'
+import '../carouselOeuvres.css'
 import { Carousel } from 'react-bootstrap';
 
-export class Caroutest extends Component {
+export class CarouselOeuvres extends Component {
 
   state = {
     post: {
@@ -28,20 +28,21 @@ export class Caroutest extends Component {
   render() {
     return (
 
-      <div className="testcarou">
-        <Carousel id="carou">
-          {this.state.post.data.map(slide => (
-            <Carousel.Item>
-              <img src={`https://www.artic.edu/iiif/2/${slide.image_id}/full/270,/0/default.jpg`} alt=" " />
-              <p id="car">{slide.title}</p>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </div>
+
+      <Carousel id="carou">
+        {this.state.post.data.map(slide => (
+          <Carousel.Item>
+            <div className="carouitations">
+              <img src={`https://www.artic.edu/iiif/2/${slide.image_id}/full/300,/0/default.jpg`} alt=" " />
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+
     )
   }
 }
 
 
-
+//<p id="car">{slide.title}</p>
 

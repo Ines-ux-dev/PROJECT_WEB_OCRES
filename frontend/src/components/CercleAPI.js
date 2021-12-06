@@ -5,6 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import { SatelliteIcon } from 'evergreen-ui';
 import { BsFillCalendarWeekFill } from "react-icons/bs";
 import { MdChair } from "react-icons/md";
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 
 export class CercleAPI extends Component {
     state = {
@@ -22,7 +23,7 @@ export class CercleAPI extends Component {
 
         return (
             <div className="eventsAPI">
-                <h6>Expositions avec nombre limités de places</h6>
+                <h6>EXPOSITION AVEC NOMBRE DE PLACES LIMITE</h6>
                 {this.state.events.map(events =>
 
                     <Row className="eventsAPII">
@@ -33,13 +34,13 @@ export class CercleAPI extends Component {
                             </div>
                         </Col>
                         <Col xs={4} md={4} lg={4}>
-                            <div className="testtitle">
-                                {events.titre_event}<br />
+                            <div className="titleAPI">
+                                <LocalActivityIcon />{events.titre_event}<br />
                             </div>
-                            <div className="teststartdate">
+                            <div className="startdateAPI">
                                 De {events.heure_debut} à {events.heure_fin}
                             </div>
-                            <div className="testenddate">
+                            <div className="enddateAPI">
                                 <BsFillCalendarWeekFill /> Du {events.date_debut} au {events.date_fin}
                             </div>
                             <div className="nbPlaces">

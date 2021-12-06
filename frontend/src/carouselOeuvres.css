@@ -14,27 +14,22 @@
 
 
 
-.testcarou{
-
+ .carouitations{
     display: flex;
- 
-    
- 
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
  }
  
  #carou{
  
-     display: flex;
- 
-     align-items: center;
- 
-     justify-content: center;
+    
  
      width: 500px;
  
-     height:550px;
+     height:900px;
  
-     background-color: rgb(247, 205, 189);
+     background-color: rgb(20, 20, 20);
  
      border-radius: 10px;
  

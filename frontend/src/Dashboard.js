@@ -9,13 +9,16 @@ import { recherche } from './APIArtChicago';
 import { Rechercher } from "./components/Rechercher";
 import { ResultatRecherche } from "./components/ResultatRecherche.js";
 import { CircleCHI } from "./components/CercleCHI.js";
-import { Caroutest } from './components/Caroutest';
+import { CarouselOeuvres } from './components/CarouselOeuvres';
 import { Graphe } from './components/Graphe';
 import { Citation } from './components/Citation';
 import { AccountIcone } from './components/AccountIcone';
 import { ClockandDate } from './components/ClockandDate';
 import { CercleAPI } from './components/CercleAPI';
 import { Sidebar } from './components/Sidebar';
+
+
+
 
 function Dashboard() {
     const [query, setQuery] = useState("");
@@ -85,15 +88,15 @@ function Dashboard() {
                                     </div>
                                 </Col>
                                 <Col xs={4} md={4} lg={4}>
-                                    <div>
-                                        <p className="grapheTitle">Horaires d'affluence a l'Art Institute of Chicago</p><br></br>
-                                        <Graphe />
-                                    </div >
+                                    <CarouselOeuvres /><br></br>
                                 </Col>
                             </Row>
                         </div>
 
-                        <Caroutest /><br></br>
+
+                        <div className="chart">
+                            <Graphe />
+                        </div >
 
                     </main>
                     <Citation />

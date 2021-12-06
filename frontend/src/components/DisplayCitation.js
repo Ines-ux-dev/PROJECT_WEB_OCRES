@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../settings.css';
+
 export default class DisplayCitation extends Component {
     state = {
         citations: []

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 
 
 export class TestTitle extends Component {
@@ -29,7 +30,7 @@ export class TestTitle extends Component {
         console.log(this.state.post.data);
         return (
             <div className="testtitle">
-                {this.state.post.data[0].title}
+                <LocalActivityIcon />{this.state.post.data[0].title}
             </div>
         );
     }
