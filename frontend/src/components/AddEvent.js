@@ -39,7 +39,7 @@ function AddEvent() {
         console.log(newData)
     }
     return (
-        <div>
+        <div className="add">
             <form onSubmit={(e) => submit(e)}>
                 <input onChange={(e) => handle(e)} id="titre_event" value={data.titre_event} placeholder="Titre de l'évènement" type="text"></input>
                 <input onChange={(e) => handle(e)} id="date_debut" value={data.date_debut} placeholder="Date de début" type="text"></input>
@@ -47,7 +47,7 @@ function AddEvent() {
                 <input onChange={(e) => handle(e)} id="heure_debut" value={data.heure_debut} placeholder="Heure de début" type="text"></input>
                 <input onChange={(e) => handle(e)} id="heure_fin" value={data.heure_fin} placeholder="Heure de fin" type="text"></input>
                 <input onChange={(e) => handle(e)} id="nbr_places" value={data.nbr_places} placeholder="Nombre de place" type="text"></input>
-                <button>Ajouter l'évènement</button>
+                <br></br><button>Ajouter l'évènement</button>
             </form>
         </div>
     )

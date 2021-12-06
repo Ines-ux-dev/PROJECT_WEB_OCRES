@@ -39,7 +39,7 @@ export default class DelCitation extends Component {
 
         return (
 
-            <div>
+            <div className="del">
 
                 <form onSubmit={this.handleSubmit}>
 

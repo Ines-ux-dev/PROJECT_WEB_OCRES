@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../settings.css';
+
 export default class DisplayEvent extends Component {
 
     state = {
@@ -22,8 +24,8 @@ export default class DisplayEvent extends Component {
         return (
             <div>
                 {this.state.events.map(events =>
-                    <ul>
-                        <li>Titre : {events.titre_event}</li>
+                    <ul >
+                        <li >Titre : {events.titre_event}</li>
                         <ul>
                             <li>Date de début : {events.date_debut}</li>
                             <li>Date de fin : {events.date_fin}</li>
