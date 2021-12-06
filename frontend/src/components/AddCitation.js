@@ -10,7 +10,7 @@ function AddCitation() {
 
         e.preventDefault();
 
-        axios.post(`http://localhost:5500/citation`, {
+        axios.post(`http://localhost:5500/citations`, {
 
             auteur: data.auteur,
 

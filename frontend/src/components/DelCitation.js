@@ -24,7 +24,7 @@ export default class DelCitation extends Component {
 
 
 
-        axios.delete(`http://localhost:5500/citation/${this.state.id}`)
+        axios.delete(`http://localhost:5500/citations/${this.state.id}`)
 
             .then(res => {
 
