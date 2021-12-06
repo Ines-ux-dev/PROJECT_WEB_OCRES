@@ -4,7 +4,7 @@ const router = express.Router();
 
 const ObjectID = require('mongoose').Types.ObjectId;
 
-const Event = require('../models/eventsModel');
+const Event = require('../Models/EventsModel');
 
 //obtenir et afficher les évènements
 
@@ -19,7 +19,7 @@ router.get('/', (req, res, next) => {
 //obtenir et afficher un évènement
 
 router.get('/:id', (req, res, next) => {
-  EventsModel.findOne({ _id: req.params.id })
+  Event.findOne({ _id: req.params.id })
     .then(things => res.status(200).json(things))
     .catch(error => res.status(400).json({ error }));
 })
@@ -29,9 +29,10 @@ router.get('/:id', (req, res, next) => {
 router.post('/', (req, res, next) => {
 
   //delete req.body._id;
-  const event = new EventsModel({
+  const event = new Event({
     ...req.body
   });
+
 
   event.save()
 
@@ -47,7 +48,7 @@ router.post('/', (req, res, next) => {
 
 router.put("/:id", (req, res, next) => {
 
-  EventsModel.updateOne({ _id: req.params.id }, {
+  Event.updateOne({ _id: req.params.id }, {
 
     ...req.body, _id: req.params.useUnifiedTopology
 
@@ -63,7 +64,7 @@ router.put("/:id", (req, res, next) => {
 
 router.delete("/:id", (req, res, next) => {
 
-  EventsModel.deleteOne({ _id: req.params.id })
+  Event.deleteOne({ _id: req.params.id })
 
     .then(() => res.status(200).json({ message: 'Evènement supprimé !' }))
 
